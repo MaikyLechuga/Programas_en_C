@@ -1,0 +1,44 @@
+#include <stdio.h>
+int main (void)
+{
+    int p;
+    float res;
+    int d;
+    printf("Indica los pesos mexicanos que deseas convertir: \n");
+    scanf("%d",&p);
+
+    printf("Indica la moneda a la que deseas convertir los pesos \n 1)dolar\n 2)libra\n 3)euro\n 4)yuan\n 5)rublo\n 6)yen: \n");
+    scanf("%d",&d);
+
+    res=0;
+    switch(d)
+    {
+    case 1:
+        res=(float)(p)*(float)(0.050);
+        break;
+
+    case 2:
+        res=(float)(p)*(float)(0.036);
+        break;
+
+    case 3:
+        res=(float)(p)*(float)(0.042);
+        break;
+
+    case 4:
+        res=(float)(p)*(float)(0.32);
+        break;
+        
+    case 5:
+        res=(float)(p)*(float)(3.63);
+        break;
+        
+    case 6:
+        res=(float)(p)*(float)(5.44);
+        break;
+    default:
+        printf("Opcion invalida");
+    }
+    printf("El resultado de la operacion seleccionada es: %1.2f", res);
+    return 0;
+}
