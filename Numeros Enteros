@@ -1,0 +1,23 @@
+#include <stdio.h>
+int main(void){
+	int A=0, B=0, C=0;
+	int d, div1, div2, b;
+	printf("Indica el valor de A: \n");
+    scanf("%d",&A);
+    printf("Indica el valor de B: \n");
+    scanf("%d",&B);
+    printf("Indica el valor de C: \n");
+    scanf("%d",&C);
+    
+    if (C%A==0)
+     printf("El numero A/C es entero: \n");
+     else
+     printf("El numero A/C no es entero: \n");
+     
+    if (C%B==0)
+     printf("El numero B/C es entero: \n");
+     else
+     printf("El numero B/C no es entero: \n");
+     
+    return 0;
+}
