@@ -1,0 +1,65 @@
+#include <stdio.h>
+
+int main (void){
+	int A,B,C;
+	float res;
+	int d;
+	
+	printf("Indica el valor de A: \n");
+    scanf("%d",&A);
+    printf("Indica el valor de B: \n");
+    scanf("%d",&B);
+    printf("Indica el valor de C: \n");
+    scanf("%d",&C);
+    
+    printf("Elige la comparación que deseas realizar \n 1)(A>3)\n 2)(A>C)\n 3)(B!=C)\n 4)(A==3)\n 5)(A*B==15)\n 6)(C/B<A)\n 7)(C/B==(-10))\n 8)(A+B+C==5)\n 9)((A+B==8) && (A-B==2))\n 10)((A+B==8) || (A-B==9))\n 11)((A>3) && (B>3) && (C<3)): \n");
+    scanf("%d",&d);
+
+    res=0;
+    switch(d)
+    {
+    case 1:
+        res=(A>3);
+        break;
+
+    case 2:
+        res=(A>C);
+        break;
+
+    case 3:
+        res=(B!=C);
+        break;
+
+    case 4:
+        res=(A==3);
+        break;
+        
+    case 5:
+        res=(A*B==15);
+        break;
+        
+    case 6:
+        res=(C/B<A);
+        break;
+    case 7:
+        res=(C/B==(-10));
+        break;
+    case 8:
+        res=(A+B+C==5);
+        break;
+    case 9:
+        res=((A+B==8) && (A-B==2));
+        break;
+    case 10:
+        res=((A+B==8) || (A-B==9));
+        break;
+    case 11:
+        res=((A>3) && (B>3) && (C<3));
+        break;
+    default:
+        printf("Opcion invalida");
+    }
+
+    printf("El resultado de la operacion seleccionada es: %1.2f", res);
+    return 0;
+}
