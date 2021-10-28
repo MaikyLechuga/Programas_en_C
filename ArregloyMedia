@@ -1,0 +1,21 @@
+#include <stdio.h> 
+
+int main(){
+	
+int i;
+int grupo[10];
+
+for(i=0; i<10; i++){
+	if(grupo[i]>-1);
+	printf("\n Dame un valor %d", i);
+	scanf("%d", &grupo[i]);
+}
+
+float suma=0;
+	for(i=0; i<10; i++){
+		suma+=grupo[i];
+	}
+	float media=suma/10;
+	printf("La media es %f", media);
+return 0;
+}
