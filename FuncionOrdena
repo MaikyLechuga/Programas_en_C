@@ -1,11 +1,11 @@
 #include <stdio.h> 
 #include <conio.h> 
 
-void OrdenarSeleccion(double grupo[], int N);
+void OrdenarSeleccion(int grupo[], int N);
 int main(){
 
 int i;
-double grupo[25];
+int grupo[25];
 
 for(i=0; i<25; i++){
 	printf("\n Dame un valor %d", i);
@@ -16,7 +16,7 @@ for(i=0; i<25; i++){
 return 0;
 }
 
-void OrdenarSeleccion(double grupo[], int N)
+void OrdenarSeleccion(int grupo[], int N)
 {
 	int i, j, pos_min;
 	double tmp;
