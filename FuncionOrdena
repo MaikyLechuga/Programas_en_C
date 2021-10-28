@@ -1,0 +1,43 @@
+#include <stdio.h> 
+#include <conio.h> 
+
+void OrdenarSeleccion(double grupo[], int N);
+int main(){
+
+int i;
+double grupo[25];
+
+for(i=0; i<25; i++){
+	printf("\n Dame un valor %d", i);
+	scanf("%d", &grupo[i]);
+	printf("%3.1f\t",grupo[i]);
+	OrdenarSeleccion(grupo, 25);
+ }
+return 0;
+}
+
+void OrdenarSeleccion(double grupo[], int N)
+{
+	int i, j, pos_min;
+	double tmp;
+		
+	for(i=0; i<24; i++){
+	
+	pos_min = i;
+	
+	for(j=i+1; j<25; j++)
+	   if (grupo[j]<grupo[pos_min])
+	      pos_min = j;
+	
+	tmp = grupo[i];
+	grupo[i] = grupo[pos_min];
+	grupo[pos_min] = tmp; 
+	printf("\n En la posicion %d el valor es %d\n", i, grupo[i]);
+	}
+float suma=0;
+	for(i=0; i<25; i++){
+		suma+=grupo[i];
+	}
+	float media=suma/25;
+	printf("La media es %f", media);
+}
