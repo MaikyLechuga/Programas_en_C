@@ -1,0 +1,26 @@
+#include<stdio.h>
+
+void tab(float *p,int n);
+
+int main(void){
+	int n;
+	float a[5]={0,0,0,0,0};
+	
+	for(n=0; n<5; n++){
+		printf("Dame un numero:");
+		scanf("%f",&a[n]);
+	}
+	
+	tab(a,5);
+	return 0;
+}
+
+void tab(float *p,int n){
+	int m;
+	
+	for(m=0; m<5; m++){
+		printf("l\t");
+		printf("%.2f\t",p[m]);
+		printf("%o\n",&p[m]);
+	}
+}
