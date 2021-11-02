@@ -1,0 +1,58 @@
+#include <stdio.h>
+void sup(int a);
+void inf(int b);
+
+int main(void)
+{
+	int n;
+	printf("Dame un numero entero:  ");
+	scanf("%d", &n);
+	
+	sup(n);
+	inf(n);
+	
+	return 0;
+}
+
+void sup(int a)
+{
+	int i,j,k,l,m;
+	
+	for(k=1; k<=a; k++){
+		for(l=a; l>k; l--){
+			printf("\t");
+		}
+		for(m=k; m>0; m--){
+			printf("%d\t",m);
+			if (m<=1){
+				for(i=k; i<=k; i++){
+					for(j=2; j<=i; j++){
+					printf("%d\t",j);
+					}
+				}
+			}
+		}
+			printf("\n");
+	}
+}
+
+void inf(int b)
+{
+	int m,n,o,p,q;
+	
+	for(m=b-1; m>=1; m--){
+		for(n=b-1; n>=m; n--){
+			printf("\t");
+		}
+		for(o=m; o>0; o--){
+			printf("%d\t",o);
+		}
+		if(o<=1){
+			for(p=m; p>=m; p--){
+				for(q=1; q<p; q++)
+					printf("%d\t", q+1);
+			}
+		}
+		printf("\n");
+	}
+}
