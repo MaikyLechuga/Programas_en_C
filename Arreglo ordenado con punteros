@@ -1,0 +1,41 @@
+#include <stdio.h> /*libreria que se emplea*/
+#include <conio.h> /*libreria para que getch se pueda usar*/
+int arr[10]={2, 3, 4, 5, 9, 19, 300, 29, 4, 1};  /*arreglo de 10 posiciones con los datos*/
+void ordena (int *p, int N);   /*declaración de la función ordena, se requiere para que el programa sepa que es un función externa y se llama en alguna parte de la función principal (main)*/
+int compara (int *m, int *n); /*declaración de la función compara, se requiere para que el programa sepa que es un función externa y se llama en alguna parte de la función principal (main)*/
+int main()  /*función principal*/
+{
+int i; /*declara la variable para hacer el recorrido por el arreglo*/
+for (i=0; i<10; i ++) /*ciclo para mostrar el arreglo*/
+    {
+        printf("[ %d ]", arr[i]);  /*colocar en pantalla el contenido del arreglo*/
+    }
+ordena(arr, 10); /*llama a la función externa ordena y se envía los parámetros para que funcione (arreglo y el no de datos)*/
+printf("\n");      /*salto de linea*/
+for (i=0; i<10; i ++)  /*ciclo para mostrar el arreglo ordenado*/
+    {
+        printf("[ %d ]", arr[i]); /*colocar en pantalla el contenido del arreglo*/
+    }
+getch();   /* instrucción para que deje la pantalla y espere a que el usuario presione una tecla*/
+return 0;
+}
+void ordena(int *p, int N)  /*funcion para ordenar*/
+{
+int i, j, t; /*variables para recorrer el arreglo y un auxiliar para contener el valor que resulte más grande
+for (i=N-1; i>=0; i--) /*recorre el arreglo desde la ultima posición*/
+    {
+        for (j=1; j<=i; j++) /*ciclo para revisar cada uno de los valores contiguos*/
+    {
+        if (compara(&p[j-1], &p[j])) /*usa la función externa compara para decidir cuál es el valor más grande*/
+            {
+            t=p[j-1];       /*t es una variable temporal auxiliar para que se use en caso de que se deban intercambiar posciones*/
+            p[j-1]=p[j];    /* vacía un dato en otra posición si hace falta, cuando no está ordenado de manera que el numero más grande esté en la ultima posición*/
+            p[j]=t;         /*coloca el dato más grande en la ultima posición del arreglo*/
+            }
+    }
+    }
+}
+int compara(int *m, int *n) /*esta función revisa si el valor guardado en la posición j-1 es mayor que el de la posición j*/
+{
+return (*m>*n); /*avisa si el contenido de lo que apunta m es más grande que el que apunta n, para que se haga el intercambio de posiciones*/
+}
