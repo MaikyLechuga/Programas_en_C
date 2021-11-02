@@ -1,0 +1,25 @@
+#include <stdio.h>
+void imprime4(int);
+
+int main(void)
+{
+	int n;
+	printf("Ingrese un numero entero:  ");
+	scanf("%d", &n);
+	imprime4(n);
+	
+}
+
+void imprime4(int n)
+{
+	int i, j, k;
+	for (i=n; i>=1; i--){
+		for (k=n; k>=i; k--){
+			printf("\t");
+		}
+		for (j=i; j>=1; j--){	
+			printf("%d\t", j);
+		}
+		printf("\n");
+	}	
+}
