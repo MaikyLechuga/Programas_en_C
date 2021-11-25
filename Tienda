@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main(){
+	int i, j, a, PRO[5][12], UNIDADES[0][0], total[5], sumaunidades;
+	float PRE[5], monto[5], promedio[5];
+	
+	for (a=1; a<=5; a++){
+		printf("\n Indique el precio de la unidad %d :", a);
+		scanf("%f", &PRE[a]);
+	}
+	
+
+	printf("Indique las unidades vendidas de cada producto: \n");
+	for (i=1; i<=5; i++){
+		printf("Indique las unidades del producto %d: \n", i);
+		for (j=1; j<=12; j++){
+			printf("En el mes %d: ", j);
+			scanf("%d", &PRO[i][j]);
+		}
+	}
+	
+	
+	for (i=1; i<=5; i++){
+		sumaunidades=0;
+		for (j=1; j<=12; j++){
+			sumaunidades+=PRO[i][j];
+		}
+		total[j]=sumaunidades;
+	
+		
+		monto[i]=total[j]*PRE[i];
+		printf("Del producto %d: fueron %d unidades y el monto total es %f .", i, total[j], monto[i]);
+		
+		promedio[i]=monto[i]/12;
+		printf("El promedio de ventas anual es %f \n", promedio[i]);
+	}
+	
+	
+	return 0;
+}
