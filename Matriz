@@ -33,12 +33,12 @@ int main(){
 			}	
 	}
 	else{
-		printf("Las dimensiones de la matriz son incorrectas, favor de introducirlos nuevamente\n");
-		printf("Escriba el número de filas de la matriz (Asegurese que sean menores a 50)\n");
+		printf("Las dimensiones no son correctas, comencemos de nuevo\n");
+		printf("Dame el numero de filas de la matriz (Que no pasen de 50)\n");
 			scanf("%d", &f);
-		printf("Escriba el numero de columnas de la matriz (Asegurese que sean menores a 50)\n");
+		printf("Dame el numero de columnas de la matriz (Que no pase de 50)\n");
 			scanf("%d", &c);
-			printf("Introduzca los valores de la matriz: ");
+			printf("Dame los valores de la matriz: ");
 		for (i=0; i<f; i++){
 			for (j=0; j<c; j++)
 		scanf("%d", &mat[i][j]);
