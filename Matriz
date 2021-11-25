@@ -1,0 +1,65 @@
+#include <stdio.h>
+
+int main(){
+	
+	int f, c, i, j;
+	
+	printf("Dame el numero de filas de la matriz: ");
+		scanf("%d", &f);
+	printf("Dame el numero de columnas de la matriz: ");
+		scanf("%d", &c);
+	int mat[f][c];
+	
+	if (1<=f && f<=50 && 1<=c && c<=50){
+			printf("Dame los valores de la matriz: ");
+		for (i=0; i<f; i++){
+			for (j=0; j<c; j++)
+		scanf("%d", &mat[i][j]);
+			}
+			
+			printf("La matriz queda de la siguiente forma: \n\n");
+		for (i=0; i<f; i++){
+			for (j=0; j<c; j++){
+			printf("%d  ", mat[i][j]);
+			}
+			printf("\n");
+		}
+		printf("La traspuesta de la matriz es: \n\n");
+		for (i=0; i<c; i++){
+			for (j=0; j<f; j++){
+			printf("%d  ", mat[j][i]);
+			}	
+			printf("\n");
+			}	
+	}
+	else{
+		printf("Las dimensiones de la matriz son incorrectas, favor de introducirlos nuevamente\n");
+		printf("Escriba el número de filas de la matriz (Asegurese que sean menores a 50)\n");
+			scanf("%d", &f);
+		printf("Escriba el numero de columnas de la matriz (Asegurese que sean menores a 50)\n");
+			scanf("%d", &c);
+			printf("Introduzca los valores de la matriz: ");
+		for (i=0; i<f; i++){
+			for (j=0; j<c; j++)
+		scanf("%d", &mat[i][j]);
+			}
+		
+			
+			printf("La matriz queda de la siguiente forma: \n\n");
+		for (i=0; i<f; i++){
+			for (j=0; j<c; j++){
+			printf("%d  ", mat[i][j]);
+			}
+			printf("\n");
+		}
+	
+		printf("La traspuesta de la matriz es: \n\n");
+		for (i=0; i<c; i++){
+			for (j=0; j<f; j++){
+			printf("%d  ", mat[j][i]);
+			}	
+			printf("\n");
+		}		
+	}
+	return 0;
+}
